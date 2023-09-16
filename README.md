@@ -1,16 +1,17 @@
 # BookMyShow Project
 
 ## Table of Contents
-- Introduction
-- Features
-- Getting Started
-  - Prerequisites
-  - Installation
-- Usage
-- Technologies Used
-- Contributing
-- License
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
+  
 ## Introduction
 Welcome to the BookMyShow project! This web application enables users to book movie tickets online. Users can browse available movies, select a movie, choose a showtime, and book their preferred seats. The project utilizes both local storage and MongoDB for temporary and permanent data storage, respectively.
 
