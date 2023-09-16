@@ -21,7 +21,7 @@ main()
 app.use(cors());
 
 // Define a route for handling booking-related APIs under the '/api/booking' path
-app.use('/api/booking', router);
+app.use('/api', router);
 
 // Start the Express server, listening on the specified port from environment variables
 app.listen(process.env.PORT, () => console.log(`App listening on port ${process.env.PORT}!`));

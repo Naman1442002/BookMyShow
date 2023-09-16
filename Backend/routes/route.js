@@ -7,8 +7,8 @@ const router = express.Router();
 router.use(express.json());
 
 // Define routes and associate them with controller functions
-router.post('/Createnewticket', bmtController.createbmt); // Route for creating a new movie ticket
-router.get('/getlastticket', bmtController.getlastticket); // Route for getting the last movie ticket
+router.post('/booking', bmtController.createbmt); // Route for creating a new movie ticket
+router.get('/booking', bmtController.getlastticket); // Route for getting the last movie ticket
 
 // Export the router for use in other parts of the application
 exports.router = router;
