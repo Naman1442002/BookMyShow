@@ -65,39 +65,23 @@
 
 - 200 OK: Successful request. Returns the created booking data as JSON.
 Example Response (200 OK):
- 
+```json
 {
   "message": "Booking Successful!!"
 }
-
+```
 - 404 Not Found: Bad Request.
 Example Response (404 Not Found):
-
+```json
 {
   "message": "Bad Request"
 }
-
+```
 - 500 Internal Server Error: Internal Server Error.
 Example Response (500 Internal Server Error):
- 
+```json
 {
   "message": "Internal Server Error"
 }
-
-### Request
-POST http://localhost:8080/api/booking/Createnewticket
-Content-Type: application/json
-  
-{
-  "movie": "Suraj par mangal bhari",
-  "slot": "10:00 AM",
-  "seats": {
-    "A1": 4,
-    "A2": 8,
-    "A3": null,
-    "A4": 5,
-    "D1": 9,
-    "D2": null
-  }
-}
+```
 
