@@ -9,7 +9,6 @@
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 
   
 ## Introduction
