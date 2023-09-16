@@ -8,7 +8,7 @@ exports.createbmt = async (req, res) => {
       await bmt.save()
       .then((data)=>{
          if (data) {
-            res.status(200).json({ message:"Booking Successful!!"}); // Return the last booking data as JSON            
+            res.status(200).json(data); // Return the last booking data as JSON            
          }
          else {
             res.status(404).json({message: 'Bad Request' })

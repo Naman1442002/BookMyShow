@@ -23,36 +23,39 @@ function ContextState(props) {
   const [variant, setvariant] = useState('')
 
   // Initially fetching last booking details
-  useEffect(() => {
-    const fetchLBD = async () => {
-      try {
-        const getLastBooking = await axios.get("http://localhost:8080/api/booking/getlastticket");
-        setlastBooking(getLastBooking.data[0]);
+  // useEffect(() => {
+  //   const fetchLBD = async () => {
+  //     try {
+  //       const getLastBooking = await axios.get("https://bookmyshow-api-jir2.onrender.com/api/booking");
+  //       setlastBooking(getLastBooking.data[0]);
 
-      } catch (error) {
-        console.error("Error fetching last booking:", error.message);
-      }
-    };
-    fetchLBD();
-  }, []);
+  //     } catch (error) {
+  //       console.error("Error fetching last booking:", error.message);
+  //     }
+  //   };
+  //   fetchLBD();
+  // }, []);
 
   // Function used to post booking info to the backend and fetch the latest last booking details
   const onclickBookBtn = async () => {
     try {
       // Submit the booking details only if movie and slot state are not empty
       if (movie !== '' && slot !== '') {
-        await axios.post("http://localhost:8080/api/booking/Createnewticket", {
+         axios.post("https://bookmyshow-api-jir2.onrender.com/api/booking", {
           "movie": movie,
           "slot": slot,
           "seats": seats
+        }).then((data)=>{
+          setisError(true);
+          setvariant('success')
+          setmessage("Booking Successful");
+          setlastBooking(data);
         });
-        setisError(true);
-        setvariant('success')
-        setmessage("Booking Successful");
+       
 
         // Getting the latest last booking details and set it to lastBooking state
-        const getLastBooking = await axios.get("http://localhost:8080/api/booking/getlastticket");
-        setlastBooking(getLastBooking.data[0]);
+        // const getLastBooking = await axios.get("https://bookmyshow-api-jir2.onrender.com/api/booking");
+        // setlastBooking(getLastBooking.data[0]);
 
         // After posting the movie details, reset all the state data
         setmovie('');
