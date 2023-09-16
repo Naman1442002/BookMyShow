@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha '__tests__/*.test.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
-    "build":"npm i",
+    "build": "npm i",
     "start": "nodemon index.js"
   },
   "author": "",
@@ -17,6 +17,7 @@
     "express": "4.17.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.10.15",
-    "node-serialize": "0.0.4"
+    "node-serialize": "0.0.4",
+    "nodemon": "^3.0.1"
   }
 }
