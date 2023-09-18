@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import UnitBlock from './Subcomp/UnitBlock'; // Assuming 'UnitBlock' is a component
 import { slots } from './data'; // Assuming 'slots' is an array of time slots
 import Context from './Context/CreateContext'; // Assuming you're using a context to manage state

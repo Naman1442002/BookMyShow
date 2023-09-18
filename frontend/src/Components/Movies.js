@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 import UnitBlock from './Subcomp/UnitBlock';
 import { movies } from './data'; // Assuming 'movies' is an array of movie names
 import Context from './Context/CreateContext';

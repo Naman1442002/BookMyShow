@@ -12,7 +12,7 @@ function UnitBlock({ text, SelectContent, selectBlockContent }) {
     // Render a div with a className of 'UnitBlock' and additional class specified in 'visit'.
     // Attach the ClickUnitBlock function to the onClick event of the div.
     // Display the 'text' prop within the div.
-    <div className={`UnitBlock ${(SelectContent==text)?`visit`:''}`} onClick={ClickUnitBlock}>
+    <div className={`UnitBlock ${(SelectContent===text)?`visit`:''}`} onClick={ClickUnitBlock}>
       {text}
     </div>
   );
