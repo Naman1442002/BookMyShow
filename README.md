@@ -14,7 +14,7 @@
 ## Introduction
 Welcome to the BookMyShow project! This web application enables users to book movie tickets online. Users can browse available movies, select a movie, choose a showtime, and book their preferred seats. The project utilizes both local storage and MongoDB for temporary and permanent data storage, respectively.
 
-**Demo:** [BookMyShow Demo]
+**Demo:** [BookMyShow Demo](https://bookmyshow-naman.netlify.app/)
 
 
 ## Features
