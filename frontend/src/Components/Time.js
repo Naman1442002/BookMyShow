@@ -4,16 +4,16 @@ import { slots } from './data'; // Assuming 'slots' is an array of time slots
 import Context from './Context/CreateContext'; // Assuming you're using a context to manage state
 
 function Time() {
-  // State to manage the selected time slot
-  const [bg, setbg] = useState(null);
-
-  // Function to handle selecting a time slot block
-  const selectBlock = (value) => {
-    setbg(value);
-  }
 
   // Accessing 'slot' and 'setslot' from the context
   const { slot, setslot } = useContext(Context);
+
+  // function pass as props to set the movie state in unitblock component on user click
+  const selectBlockContent = (value) => {
+    setslot(value);
+    // setting the user selection to local storage
+    window.localStorage.setItem('slot', value)
+  }
 
   return (
     <>
@@ -26,9 +26,8 @@ function Time() {
               <UnitBlock
                 key={idx}
                 text={slt}
-                selectBlock={selectBlock}
-                selectBlockContent={(value) => { setslot(value) }} // Set the selected time slot in the context
-                visit={slot === '' ? '' : bg === slt ? 'visit' : ''} // Apply 'visit' class if the time slot is selected
+                SelectContent={slot}
+                selectBlockContent={selectBlockContent} // Set the selected time slot in the context
               />
             ))
           }

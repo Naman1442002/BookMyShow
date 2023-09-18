@@ -4,19 +4,19 @@ import { movies } from './data'; // Assuming 'movies' is an array of movie names
 import Context from './Context/CreateContext';
 
 function Movies() {
-  const [bg, setbg] = useState(null);
-
-  // Function to handle selecting a movie block
-  const selectBlock = (value) => {
-    setbg(value);
-  }
-
   // Accessing 'movie' and 'setmovie' from the context
   const { movie, setmovie } = useContext(Context);
 
+  // function pass as props to set the movie state in unitblock component on user click
+  const selectBlockContent = (value) => {
+    setmovie(value);
+    // setting the user selection to local storage
+    window.localStorage.setItem('movie', value)
+  }
+
   return (
     <>
-      <div  className='movie' >
+      <div className='movie' >
         <h2>Select a Movie</h2>
         <div className='movie-content'>
           {
@@ -25,9 +25,8 @@ function Movies() {
               <UnitBlock
                 key={idx}
                 text={movi}
-                selectBlock={selectBlock}
-                selectBlockContent={(value) => { setmovie(value) }} // Set the selected movie in the context
-                visit={movie === '' ? '' : bg === movi ? 'visit' : ''} // Apply 'visit' class if the movie is selected
+                SelectContent={movie}
+                selectBlockContent={selectBlockContent} // Set the selected movie in the context
               />
             ))
           }

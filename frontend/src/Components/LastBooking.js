@@ -14,14 +14,14 @@ function LastBooking() {
     )
   } else {
 
-     const Seat = Object.entries(lastBooking.seats)
+    const Seat = Object.entries(lastBooking.seats)
     // Render last booking details when available
     return (
       <div className='lastBooking'>
         <h3>Last Booking Details:</h3>
         <h5>Seats:</h5>
         {
-          Seat.map(([key, set], idx)=>(
+          Seat.map(([key, set], idx) => (
             <h5 key={idx}>{key}: <span style={{ fontWeight: 'normal' }}>{set || 0}</span></h5>
           ))
         }

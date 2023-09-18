@@ -2,11 +2,11 @@
 
 ## Endpoint 1: Get Last Ticket
 - **HTTP Method:** GET
-- **URL:** http://localhost:8080/api/booking/getlastticket
+- **URL:** http://localhost:8080/api/booking/
 - **Description:** This endpoint allows you to retrieve information about the last movie ticket booking.
 
 ### Request
-  GET http://localhost:8080/api/booking/getlastticket
+  GET http://localhost:8080/api/booking/
 
 ### Response
 
@@ -42,11 +42,12 @@
   }
 
 ## Endpoint 2: Create New Ticket
-- HTTP Method: POST
-- URL: http://localhost:8080/api/booking/Createnewticket
-- Description: This endpoint allows you to create a new movie ticket booking.
+- **HTTP Method:**: POST
+- **URL**: http://localhost:8080/api/booking/
+- **Description**: This endpoint allows you to create a new movie ticket booking.
 
 ### Request
+   POST http://localhost:8080/api/booking/
 ```json
  {
   "movie": "Suraj par mangal bhari",

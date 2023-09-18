@@ -8,7 +8,6 @@ import Context from './Components/Context/CreateContext';
 
 function App() {
 
-
   // Accessing data from the Context
   const { message, isError, variant } = useContext(Context);
 
@@ -24,7 +23,7 @@ function App() {
 
       </div>
       {/* Title */}
-      <h1  style={{ marginLeft: '50px', marginTop: '55px' }}>&#128330; Book your show!! &#128330;</h1>
+      <h1 style={{ marginLeft: '50px', marginTop: '55px' }}>&#128330; Book your show!! &#128330;</h1>
 
       {/* Content */}
       <div className='home' >
