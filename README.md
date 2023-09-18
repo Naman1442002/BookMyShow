@@ -32,12 +32,15 @@ Before running the project, ensure you have the following prerequisites installe
 
 ### Installation
 1. Clone the repository from GitHub:
+ ```
    git clone https://github.com/Naman1442002/BookMyShow.git
    cd BookMyShow
-2. Install the required dependencies:
-    npm install
-
-3. Set up the MongoDB connection:
+```
+3. Install the required dependencies:
+   ```
+   npm install
+  
+5. Set up the MongoDB connection:
 - Make sure MongoDB is installed and running on your system.
 - Create a MongoDB database for the BookMyShow project and note down the connection string.
 
