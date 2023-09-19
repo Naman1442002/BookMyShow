@@ -44,7 +44,8 @@ function Seat({ text, seats, setseat, setmessage, setisError, setvariant }) {
         type="number"
         name={text}
         id="seats"
-        value={seats[text]}
+        value={seats[text]||''}
+        placeholder={0}
         style={{ width: "50px" }}
         max={10}
         onChange={stop}
