@@ -16,6 +16,12 @@ Welcome to the BookMyShow project! This web application enables users to book mo
 
 **Demo:** [BookMyShow Demo](https://bookmyshow-naman.netlify.app/)
 
+![BookMyShow](./frontend/src/ScreenShots/Screenshot%20(1).png)
+![BookMyShow](./frontend/src/ScreenShots/Screenshot%20(2).png)
+![BookMyShow](./frontend/src/ScreenShots/Screenshot%20(3).png)
+![BookMyShow](./frontend/src/ScreenShots/Screenshot%20(4).png)
+![BookMyShow](./frontend/src/ScreenShots/Screenshot%20(5).png)
+
 
 ## Features
 - Browse a list of available movies with details, including movie name and showtimes.
