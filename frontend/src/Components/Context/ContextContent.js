@@ -34,10 +34,12 @@ function ContextState(props) {
     };
 
     // Preserverd the user selection in localStorage
-    setmovie(window.localStorage.getItem('movie'))
-    setslot(window.localStorage.getItem('slot'))
-      if(window.localStorage.getItem('seat'))
-        { setseat( JSON.parse( window.localStorage.getItem('seat')))}
+   
+      if(window.localStorage.getItem('seat') && window.localStorage.getItem('movie') && window.localStorage.getItem('slot'))
+        { 
+          setmovie(window.localStorage.getItem('movie'))
+          setslot(window.localStorage.getItem('slot'))
+          setseat( JSON.parse( window.localStorage.getItem('seat')))}
 
     fetchLBD();
   }, []);
